@@ -1,0 +1,17 @@
+<nav class="fixed top-0 left-0 right-0 bg-white shadow-lg w-md m-auto ">
+    <div class="flex justify-around p-4 h-15">
+        <h1 class="text-amber-950"> MAHTAB APP</h1>
+
+    </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<nav class="fixed bottom-0 left-0 right-0 bg-white shadow-lg w-md m-auto">
+    <div class="flex justify-around p-4 h-15 ">
+      <button pButton icon="pi pi-home" size="large" [rounded]="true" [text]="true" (click)="onclickHome()" ></button>
+      <button pButton icon="pi pi-envelope"size="large" [rounded]="true" [text]="true" (click)="onClickTodo()" ></button>
+      <button pButton  icon="pi pi-user" size="large" [rounded]="true" [text]="true"  ></button>
+      <button pButton  icon="pi pi-sign-in" size="large" [rounded]="true" [text]="true" (click)="onClickLogIn() "  ></button>
+    </div>
+  </nav>

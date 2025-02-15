@@ -1,0 +1,18 @@
+
+<div class = "grid grid-cols-2 gap-5 w-md m-auto bg-amber-50 mt-15 mb-15">
+    @for (item of postBlog; track $index) {
+      
+      <section class=" text-balance text-center text-black shadow-xl rounded-3xl p-6 ">
+        <div class="">
+        <img [src]="item.image" class="w-xl h-30">
+         </div>
+        <h2 class="text-lg ">{{item.title}}</h2>
+        <div class="price text-lg text-blue-500"> {{item.price}}$</div>
+        <p class="description text-sm">{{item.description.substring(0,100)}}...</p>
+        <div class="mt-6">
+        <p-button label="add to card" icon="pi-shopping-cart" class="" />
+        </div>
+      </section>
+    }
+    </div>
+    
