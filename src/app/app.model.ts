@@ -5,6 +5,11 @@
     image:string,
     category:string
 
+ }
 
+ export interface todoItem{
+   id:number
+   task:string
+   completed:boolean
 
  }

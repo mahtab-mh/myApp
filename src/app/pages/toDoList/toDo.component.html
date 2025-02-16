@@ -1,6 +1,19 @@
 <nav class="mt-15 bg-purple-400 shadow-lg w-md m-auto h-220 rounded-2xl ">
-    <div class="flex justify-around p-4 h-15 bg-purple-600 rounded-2xl">
-        <h1 class="text-amber-950"> Todo List</h1>
-
+    <div class="flex justify-around p-4 h-15 bg-purple-600 rounded-2xl ">
+        <h1 class="subpixel-antialiased   "> Todo List</h1>
     </div>
+    <input class="mt-5 ml-10 bg-white rounded-xl w-70 h-10" variant="filled" [(ngModel)]="newTask" placeholder="    Enter new task" />
+    <p-button (click)="addTask()" class="ml-5" label="Add" severity="secondary"  />
+    <p-divider  />
+    @for (item of todoList; track $index ; ) {
+        <ul class="ml-15 bg-white w-80 p-3 m-5 rounded-xl">
+          <li class="flex items-center gap-4">
+            <input type="checkbox" (onclick)="isComplitedin($index)" />
+            <div class="">{{ item.task }}</div>
+            <p-button  (onClick)="deleteTask(item.id)" icon="pi pi-trash" [rounded]="true" [text]="true" />
+            <p-button icon="pi pi-pencil" [rounded]="true" [text]="true" />
+          </li>
+          
+        </ul>
+      }
 </nav>
