@@ -11,5 +11,6 @@
    id:number
    task:string
    completed:boolean
+   isediting ?: boolean
 
  }
